@@ -1,0 +1,113 @@
+/* Global Variables */
+:root {
+    --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+    --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+    --bg-blue-gradient: linear-gradient(157.81deg, #def9fa -43.27%, #bef3f5 -21.24%, #9dedf0 12.19%, #7de7eb 29.82%, #5ce1e6 51.94%, #33bbcf 90.29%);
+    --bg-black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+    --bg-black-gradient-2: linear-gradient(-168.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+    --bg-gray-gradient: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101d 95.11%);
+    --bg-discount-gradient: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+    --font-family: "Poppins", sans-serif;
+    --text-gradient: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #def9fa 0.89%, #bef3f5 17.23%, #9dedf0 42.04%, #7de7eb 55.12%, #5ce1e6 71.54%, #33bbcf 100%);
+    --up-color: #22ab94;
+    --down-color: #f7525f;
+    --border-up-color: #22ab94;
+    --border-down-color: #f7525f;
+    --wick-up-color: #22ab94;
+    --wick-down-color: #f7525f;
+}
+
+/* Main Container */
+.tradingview-widget-container {
+    padding: 10px; /* Reduced padding to make it more compact */
+    border: 2px solid var(--border-up-color);
+    border-radius: 15px;
+    background: var(--bg-black-gradient);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 900px; /* Maximum width */
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px; /* Reduced space above the component */
+}
+
+/* Heading Style */
+.widget-heading {
+    font-family: var(--font-family); /* Using the custom font from global variables */
+    font-size: 26px; /* Adjusted font size for the heading */
+    color: #fff; /* White color for text */
+    text-align: center; /* Center align the text */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Make the text uppercase */
+    margin-bottom: 20px; /* Space between the heading and the widget */
+    padding: 10px 0; /* Vertical padding for better spacing */
+    background: var(--bg-blue-gradient); /* Gradient background from the global variables */
+    border-radius: 8px; /* Rounded corners for the heading box */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for a floating effect */
+    width: 100%; /* Full width to ensure it spans across the container */
+    display: inline-block; /* Aligns the heading properly with the container */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Additional Styles for Hover Effect */
+.widget-heading:hover {
+    background: var(--bg-black-gradient); /* Change background on hover */
+    color: var(--up-color); /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+/* Widget Styling */
+.tradingview-widget-container__widget {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(145deg, var(--bg-blue-gradient), var(--bg-black-gradient));
+    transition: border 0.3s ease;
+}
+
+.tradingview-widget-container__widget:hover {
+    border: 2px solid var(--border-up-color);
+}
+
+/* Copyright Section - Positioned Below the Widget */
+.tradingview-widget-copyright {
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
+    margin-top: 20px; /* Ensure it's separated below the widget */
+    display: none; /* Remove the link section */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tradingview-widget-container {
+        padding: 8px; /* Reduce padding on smaller screens */
+    }
+
+    .widget-heading {
+        font-size: 22px; /* Smaller font size for tablets and smaller devices */
+        margin-bottom: 15px; /* Adjust space between heading and widget */
+    }
+}
+
+@media (max-width: 480px) {
+    .tradingview-widget-container {
+        max-width: 100%; /* Allow full width on very small screens */
+        padding: 5px; /* More compact padding */
+    }
+
+    .widget-heading {
+        font-size: 18px; /* Smaller font size for very small screens */
+        margin-bottom: 10px; /* Less space below the heading on very small screens */
+    }
+}

@@ -1,0 +1,167 @@
+/* Global Font Family */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+/* Variables */
+:root {
+  --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+  --text-gradient: linear-gradient(180.81deg, #def9fa 0.89%, #bdbdbd 17.23%, #848484 42.04%, #666666 55.12%, #303030 71.54%, #0b0b0b 100%);
+  --blue-gradient: linear-gradient(157.81deg, #def9fa -43.27%, #bef3f5 -21.24%, #9dedf0 12.19%, #7de7eb 29.82%, #5ce1e6 51.94%, #33bbcf 90.29%);
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--black-gradient);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ChatRoom Component */
+.chatroom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px auto;
+  background: var(--blue-gradient);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  height: 80vh;
+}
+
+.chatlogger {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background: var(--black-gradient);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.chatlogger div {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sent {
+  background: var(--blue-gradient);
+  color: white;
+  text-align: right;
+}
+
+.received {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Input & Button Styles */
+.createchat {
+  display: flex;
+  gap: 10px;
+}
+
+.usernameInput,
+.messageInput {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(7, 7, 7);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usernameInput:focus,
+.messageInput:focus {
+  outline: none;
+  border-color: #5ce1e6;
+  box-shadow: 0 4px 15px rgba(92, 225, 230, 0.5);
+}
+
+.sendButton {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5ce1e6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: #33bbcf;
+  box-shadow: 0 4px 15px rgba(51, 187, 207, 0.5);
+}
+
+/* Rooms Component */
+.chat {
+  width: 140%;
+  margin: 20px auto;
+  background: var(--black-gradient);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 30px;
+}
+
+.chat h1 {
+  font-size: 2.5rem;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.room {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.room:hover {
+  background: var(--blue-gradient);
+  transform: scale(1.02);
+}
+
+.room h2 {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.room .btn {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #030303;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room .btn:hover {
+  background-color: #030303;
+  box-shadow: 0 4px 15px rgba(51, 187, 207, 0.5);
+}

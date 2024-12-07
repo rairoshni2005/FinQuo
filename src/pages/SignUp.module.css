@@ -1,0 +1,140 @@
+/* Container for the entire signup form */
+.signupContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Black background for the page */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form wrapper */
+.signupForm {
+    width: 100%;
+    max-width: 400px;
+    background-color: #1a1a1a; /* Dark gray form background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Title of the signup form */
+.signupTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #007bff; /* Blue shade from the login page */
+}
+
+/* Labels for inputs */
+.signupLabel {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ddd; /* Light gray text color */
+}
+
+/* Input fields */
+.signupInput {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 4px;
+    background-color: #2a2a2a; /* Slightly lighter background for inputs */
+    color: #fff; /* White text for inputs */
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.signupInput:focus {
+    border-color: #007bff; /* Blue border on focus */
+}
+
+/* Error message */
+.signupError {
+    color: #ff4d4d; /* Bright red for error */
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Submit button */
+.signupButton {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #000, #007bff); /* Gradient from black to blue */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.signupButton:hover {
+    background: linear-gradient(
+        to right,
+        #2d4f73 0%,
+        #3a6598 50%,
+        #477cbd 100%
+    ); /* Blue gradient for hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .signupForm {
+        padding: 15px;
+    }
+
+    .signupTitle {
+        font-size: 20px;
+    }
+
+    .signupInput {
+        font-size: 12px;
+    }
+
+    .signupButton {
+        font-size: 14px;
+    }
+}
+
+/* Popup styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popupContent {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+}
+
+.closeButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: linear-gradient(45deg, #000, #007bff);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

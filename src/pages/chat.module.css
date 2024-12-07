@@ -1,0 +1,101 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: #0D324D; /* Elegant dark blue background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    color: #ffffff; /* White text for readability */
+    padding: 20px;
+    box-sizing: border-box; /* Consistent spacing */
+}
+
+.searchbox {
+    width: 70%;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchinput {
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    border: 2px solid #ccc; /* Neutral border */
+    border-radius: 25px; /* Smooth rounded input */
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out; /* Smooth hover and focus animations */
+    background-color: #f8f9fa; /* Light background for input */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.searchinput:focus {
+    border-color: #82c0ff; /* Highlight color on focus */
+    box-shadow: 0 0 6px rgba(130, 192, 255, 0.6); /* Glowing border effect */
+}
+
+.searchresult {
+    width: 70%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between results */
+}
+
+.result {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff; /* Clean white for result cards */
+    border: 1px solid #ddd; /* Subtle border for results */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Smooth hover animation */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle card elevation */
+    cursor: pointer;
+}
+
+.result:hover {
+    background-color: #f0f8ff; /* Light highlight on hover */
+    transform: translateY(-2px); /* Slight lift for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
+}
+
+.result p {
+    margin: 0;
+    font-size: 16px; /* Consistent, readable font size */
+    color: #333; /* Dark text for contrast */
+    font-weight: 500;
+}
+
+.result button {
+    padding: 8px 12px;
+    background-color: #0D324D; /* Same dark blue as the background */
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.result button:hover {
+    background-color: #072A3E; /* Slightly darker blue on hover */
+}
+
+.chatbox {
+    width: 70%;
+    height: 70vh;
+    background-color: #ffffff; /* Clean white for chat area */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Elevation effect */
+    margin-top: 20px;
+    overflow-y: auto; /* Scrollable if content overflows */
+    padding: 10px; /* Padding inside the chat box */
+}
